@@ -1,0 +1,18 @@
+version: '3'
+services:
+    nodets_auth_db:
+        image: mysql:5.7.29
+        container_name: nodets_auth_db
+        restart: unless-stopped
+        tty: true
+        ports: 
+        - "3306:3306"
+        environment: 
+            MYSQL_DATABASE: nodets_auth
+            MYSQL_USER: root
+            MYSQL_PASSWORD: secret
+            MYSQL_ROOT_PASSWORD: secret
+        networks: 
+        - default
+        volumes: 
+        - ./docker/mysql:/var/lib/mysql
