@@ -19,3 +19,5 @@ API de autenticação com Node, Typescript, Express, TypeORM, e Docker
 ### Para testar se a api está acessível entre no endereço:
 
 [http://localhost:3333](http://localhost:3333)
+
+Você pode importar as rotas para o seu postman, importando o arquivo da raiz do projeto routes_api.postman.json
