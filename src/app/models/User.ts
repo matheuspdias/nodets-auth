@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn ,BeforeInsert, BeforeUpdate } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn ,BeforeInsert, BeforeUpdate, Index } from 'typeorm';
 import bcrypt from 'bcryptjs';
 
 @Entity('users')
@@ -7,6 +7,7 @@ class User {
     id: number;
 
     @Column()
+    @Index({ unique: true })
     email: string;
 
     @Column()
