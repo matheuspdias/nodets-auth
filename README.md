@@ -3,9 +3,9 @@ API de autenticação com Node, Typescript, Express, TypeORM, e Docker
 
 ### Para rodar o projeto é necessário estar dentro dessa pasta do projeto no terminal e ter o docker instalado, execute o seguinte comando:
 
-`docker-compose up -d`
+`docker-compose up`
 
-### Depois de rodar o docker você deve rodar as migration para criar as tabelas
+### Depois de rodar o docker abra outra aba do terminal na mesma pasta para rodar as migration para criar as tabelas com o seguinte comando:
 
 `docker-compose run nodets_app npm run migration`
 
