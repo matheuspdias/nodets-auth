@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, Table} from "typeorm";
+import {MigrationInterface, QueryRunner, Table, PrimaryGeneratedColumn} from "typeorm";
 
 export class CreateUsersTable1625708656358 implements MigrationInterface {
 
@@ -10,6 +10,8 @@ export class CreateUsersTable1625708656358 implements MigrationInterface {
                     name: 'id',
                     type: 'int',
                     isPrimary: true,
+                    isGenerated: true,
+                    generationStrategy: 'increment',
                 },
                 {
                     name: 'email',
