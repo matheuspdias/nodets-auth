@@ -25,7 +25,7 @@ class AuthController {
             })
         }
 
-        const token = jwt.sign({ id: user.id }, `${process.env.PORT}`, { expiresIn: '1d' });
+        const token = jwt.sign({ id: user.id }, `${process.env.SECRET}`, { expiresIn: '1d' });
 
         delete user.password;
 
