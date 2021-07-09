@@ -1,6 +1,6 @@
 {
     "type": "mysql",
-    "host": "localhost",
+    "host": "nodets_auth_db",
     "port": 3306,
     "username": "root",
     "password": "secret",

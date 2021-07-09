@@ -10,6 +10,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}))
 app.use(routes);
 
-app.listen(3000, () => console.log(`Server started at http://localhost:${process.env.PORT}`));
+app.listen(3333, () => console.log(`Server started at http://localhost:${process.env.PORT}`));
 
 module.exports = app;

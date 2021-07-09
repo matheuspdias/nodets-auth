@@ -1,5 +1,15 @@
 version: '3'
 services:
+    nodets_app:
+        build: .
+        command: npm run dev
+        ports:
+            - "3333:3333"
+        volumes:
+            - .:/usr/app
+        networks: 
+            - default
+
     nodets_auth_db:
         image: mysql:5.7.29
         container_name: nodets_auth_db
@@ -13,6 +23,11 @@ services:
             MYSQL_PASSWORD: secret
             MYSQL_ROOT_PASSWORD: secret
         networks: 
-        - default
+            - default
         volumes: 
-        - ./docker/mysql:/var/lib/mysql
+            - ./docker/mysql:/var/lib/mysql
+            
+
+networks:
+    default:
+        driver: bridge
